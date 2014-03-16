@@ -10,5 +10,6 @@
  *
  *= require_self
  *= require_tree .
+ *= require twitter/bootstrap.min.css
  *= require bootstrap_and_overrides.less
  */

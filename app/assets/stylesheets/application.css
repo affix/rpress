@@ -10,6 +10,5 @@
  *
  *= require_self
  *= require_tree .
- *= require bootstrap/variables.less
- *= require bootstrap/bootstrap.less
+ *= require bootstrap/bootstrap.min.css
  */

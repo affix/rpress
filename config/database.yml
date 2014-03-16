@@ -25,4 +25,4 @@ production:
   password: <%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>
   host:     <%=ENV['OPENSHIFT_MYSQL_DB_HOST']%>
   port:     <%=ENV['OPENSHIFT_MYSQL_DB_PORT']%>
-  socketL   <%= ENV['OPENSHIFT_MYSQL_DB_SOCKET'] %>
+  socket:   <%= ENV['OPENSHIFT_MYSQL_DB_SOCKET'] %>

@@ -21,6 +21,26 @@
     </header>
     <div class="container">
 		<%= yield %>
+
+		<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>Keiran <em>Smith</em> is a Software Developer from Scotland.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Categories</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">Posts</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://github.com/Affix/">GitHub</a></li>
+              <li><a href="https://twitter.com/cli">Twitter</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
     </div> <!-- /container -->
     <footer class="blog-footer">
 		Built with <i class="fa fa-heart"></i> using <a href="http://getbootstrap.com">Bootstrap</a> and <a href="http://www.rubyonrails.org">Rails</a><br />

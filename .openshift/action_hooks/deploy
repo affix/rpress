@@ -1,0 +1,2 @@
+echo "Running DB Migrations"
+bundle exec rake db:migrate

@@ -20,9 +20,9 @@ test:
 
 production:
   adapter:  mysql
-  database: me
-  username: adminIvN2sVL
-  password: wk_bdYs5EE5s
-  socket:   /var/lib/openshift/5325e4e5e291bc90fb000082/mysql//socket/mysql.sock
-  host:     127.1.244.130
-  port:     3306
+  database: <%=ENV['OPENSHIFT_APP_NAME']%>
+  username: <%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>
+  password: <%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>
+  host:     <%=ENV['OPENSHIFT_MYSQL_DB_HOST']%>
+  port:     <%=ENV['OPENSHIFT_MYSQL_DB_PORT']%>
+  socketL   <%= ENV['OPENSHIFT_MYSQL_DB_SOCKET'] %>

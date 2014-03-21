@@ -5,6 +5,12 @@ Blog::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'index#index'
 
+ #resources :categories
+ get '/category/:slug' => 'category#index' do
+    @slug = params[:slug]
+    erb :slug
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

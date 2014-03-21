@@ -6,7 +6,6 @@ class CreateAuthors < ActiveRecord::Migration
       t.string :email
       t.string :username
       t.string :password_digest
-
       t.text :about, :null => true
       t.string :image, :null => true
       t.timestamps

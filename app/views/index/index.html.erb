@@ -1,1 +1,12 @@
-index.html.erb
+<% if @posts != nil %>
+	<% @posts.each do |p| %>
+		<%= render 'post', {p: p} %>
+	<% end %>
+<% else %>
+	<div class="alert alert-danger">
+	<strong>Error!</strong><br />
+	There are currently no posts available.
+	</div>
+<% end %>
+
+<%= paginate @posts %>

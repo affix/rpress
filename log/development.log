@@ -9802,3 +9802,2064 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 00:07:32
 
 
 Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-03-22 00:07:32 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:14:17 +0000
+Processing by IndexController#index as HTML
+  Rendered index/_post.html.erb (1.3ms)
+  Rendered index/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 39ms
+
+ActionView::Template::Error (undefined method `post_title' for nil:NilClass):
+    1: <div class="blog-post">
+    2: 	<h4 class="blog-post-title"><%= p.post_title %></h4>
+    3: 	<%= p.post_body %><br />
+    4: 	<hr>
+    5: 	<small>
+  app/views/index/_post.html.erb:2:in `_app_views_index__post_html_erb___836177210023195927_70328582038200'
+  app/views/index/index.html.erb:2:in `_app_views_index_index_html_erb__3210980471106438067_70328608531140'
+
+
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (31.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:14:50 +0000
+Processing by IndexController#index as HTML
+  Rendered index/_post.html.erb (0.9ms)
+  Rendered index/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined method `post_title' for nil:NilClass):
+    1: <div class="blog-post">
+    2: 	<h4 class="blog-post-title"><%= p.post_title %></h4>
+    3: 	<%= p.post_body %><br />
+    4: 	<hr>
+    5: 	<small>
+  app/views/index/_post.html.erb:2:in `_app_views_index__post_html_erb___836177210023195927_70328582038200'
+  app/views/index/index.html.erb:2:in `_app_views_index_index_html_erb__3210980471106438067_70328593916340'
+
+
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:15:31 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% if @post != nil %>
+    2: 	<% @posts.each do |p| %>
+    3: 		<%= render 'post', {p: p} %>
+    4: 	<% end %>
+    5: <% else %>
+  app/views/index/index.html.erb:2:in `_app_views_index_index_html_erb__3210980471106438067_70328568119500'
+
+
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:15:44 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.8ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 105ms (Views: 102.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-03-22 01:15:45 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.7ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:19 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:16:32 +0000
+Processing by IndexController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (52.6ms)
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (3.6ms)
+  Rendered index/index.html.erb within layouts/application (68.9ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 8]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 10]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 11]]
+Completed 200 OK in 135ms (Views: 128.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 01:16:33 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:19:19 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" LIMIT 1 OFFSET 0[0m
+  [1m[35mTag Load (20.7ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (203.8ms)
+  Rendered index/index.html.erb within layouts/application (277.3ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 949ms (Views: 764.4ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 01:19:21 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-22 01:19:21 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:19:21 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-22 01:19:21 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:19:21 +0000
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2014-03-22 01:19:21 +0000
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-03-22 01:19:21 +0000
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2014-03-22 01:19:21 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 01:19:22 +0000
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2014-03-22 01:19:25 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" LIMIT 1 OFFSET 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 2]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (3.4ms)
+  Rendered index/index.html.erb within layouts/application (15.6ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 70ms (Views: 59.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:19:26 +0000
+Processing by IndexController#index as HTML
+  [1m[35m (1.9ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" LIMIT 1 OFFSET 0[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.7ms)
+  Rendered index/index.html.erb within layouts/application (16.3ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 42ms (Views: 37.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2014-03-22 01:19:27 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" LIMIT 1 OFFSET 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 2]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.6ms)
+  Rendered index/index.html.erb within layouts/application (13.6ms)
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:19:28 +0000
+Processing by IndexController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" LIMIT 1 OFFSET 0[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.8ms)
+  Rendered index/index.html.erb within layouts/application (17.4ms)
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2014-03-22 01:19:29 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" LIMIT 1 OFFSET 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 2]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.6ms)
+  Rendered index/index.html.erb within layouts/application (13.7ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:19:30 +0000
+Processing by IndexController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" LIMIT 1 OFFSET 0[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.8ms)
+  Rendered index/index.html.erb within layouts/application (13.9ms)
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:20:08 +0000
+
+SyntaxError (/Users/affix/Desktop/blog/app/controllers/index_controller.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+		@posts = Post.all.order("created_at DESC")page(params[:page]).per(1)
+		                                              ^):
+  activesupport (4.0.3) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/error_collector.rb:55:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/agent_hooks.rb:32:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/browser_monitoring.rb:27:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/developer_mode.rb:45:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.3) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__527863869186934343__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.2) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.2) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.2) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.2) lib/thin/connection.rb:53:in `process'
+  thin (1.6.2) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.2) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.2) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.3) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.3) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.3) lib/rails/commands.rb:71:in `tap'
+  railties (4.0.3) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:20:22 +0000
+Processing by IndexController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 1 OFFSET 0[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 2]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (20.2ms)
+  Rendered index/index.html.erb within layouts/application (39.9ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 78ms (Views: 71.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 01:20:22 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-22 01:20:22 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:20:22 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:23 +0000
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2014-03-22 01:20:26 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 1 OFFSET 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (8.2ms)
+  Rendered index/index.html.erb within layouts/application (18.9ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 47ms (Views: 37.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:20:28 +0000
+Processing by IndexController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 1 OFFSET 0[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 2]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.6ms)
+  Rendered index/index.html.erb within layouts/application (12.9ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 71ms (Views: 68.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:20:46 +0000
+Processing by IndexController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 1 OFFSET 0
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (3.1ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered index/index.html.erb within layouts/application (19.8ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 51ms (Views: 47.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 01:20:47 +0000
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2014-03-22 01:20:48 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 1 OFFSET 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (3.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered index/index.html.erb within layouts/application (17.0ms)
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 102ms (Views: 100.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:20:50 +0000
+Processing by IndexController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 1 OFFSET 0
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.9ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered index/index.html.erb within layouts/application (16.5ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2014-03-22 01:20:51 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 1 OFFSET 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (3.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered index/index.html.erb within layouts/application (14.0ms)
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:20:52 +0000
+Processing by IndexController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 1 OFFSET 0
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.7ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered index/index.html.erb within layouts/application (15.4ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 65ms (Views: 61.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2014-03-22 01:20:53 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 1 OFFSET 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (4.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered index/index.html.erb within layouts/application (17.2ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:20:54 +0000
+Processing by IndexController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 1 OFFSET 0
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (3.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered index/index.html.erb within layouts/application (14.6ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2014-03-22 01:20:56 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 1 OFFSET 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.8ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered index/index.html.erb within layouts/application (14.8ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:20:56 +0000
+Processing by IndexController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 1 OFFSET 0
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (3.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered index/index.html.erb within layouts/application (47.2ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 68ms (Views: 65.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+Processing by IndexController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (20.0ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (8.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered index/index.html.erb within layouts/application (40.3ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 11]]
+Completed 200 OK in 97ms (Views: 90.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 01:22:08 +0000
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "username" varchar(255), "password_digest" varchar(255), "about" text, "image" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "category_title" varchar(255), "category_slug" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "post_title" varchar(255), "post_slug" varchar(255), "post_body" text, "category_id" integer, "author_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_name" varchar(255), "tag_slug" varchar(255), "post_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140321221114')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140315000431')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140321221053')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140321221101')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (21.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAuthors (20140315000431)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "username" varchar(255), "password_digest" varchar(255), "about" text, "image" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140315000431"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCategories (20140321221053)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "category_title" varchar(255), "category_slug" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140321221053"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePosts (20140321221101)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "post_title" varchar(255), "post_slug" varchar(255), "post_body" text, "category_id" integer, "author_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140321221101"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTags (20140321221114)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_name" varchar(255), "tag_slug" varchar(255), "post_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140321221114"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "username" varchar(255), "password_digest" varchar(255), "about" text, "image" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (5.5ms)[0m  CREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "category_title" varchar(255), "category_slug" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "post_title" varchar(255), "post_slug" varchar(255), "post_body" text, "category_id" integer, "author_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_name" varchar(255), "tag_slug" varchar(255), "post_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140321221114')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140315000431')[0m
+  [1m[35m (1.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140321221053')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140321221101')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (5.5ms)[0m  INSERT INTO "authors" ("created_at", "email", "first_name", "last_name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["email", "affix@affix.me"], ["first_name", "Keiran"], ["last_name", "Smith"], ["password_digest", "$2a$10$GiVXYEgtLhhdEm4cteCo1uQTy.goZnYFo1ftCSmteHfpa65rg.Q4y"], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("category_slug", "category_title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_slug", "test-category-0"], ["category_title", "Test Category 0"], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("author_id", "category_id", "created_at", "post_body", "post_slug", "post_title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author_id", 1], ["category_id", 0], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["post_body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec ligula lacinia, vehicula ante convallis, ullamcorper velit. Vestibulum eu viverra nunc. Nunc ac lobortis diam. Phasellus placerat nibh vel tempor sodales. Mauris pellentesque ornare odio, quis faucibus orci tempor et. Donec tincidunt mi interdum, elementum est rhoncus, lacinia neque. Fusce pharetra, augue semper malesuada suscipit, elit elit semper mi, eget luctus libero libero non dolor. Morbi ac sapien lacinia, pellentesque dolor adipiscing, volutpat risus. Donec id odio laoreet, adipiscing elit id, sollicitudin nunc. Pellentesque vel orci a arcu ornare placerat vel vel lorem. Nulla accumsan varius ullamcorper. Nullam lobortis quam nisi, ac volutpat odio pretium ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n<MORE>\nMorbi tincidunt a sem quis ullamcorper. Cras sit amet eros elit. Donec faucibus ipsum in lobortis aliquet. Nullam sed fermentum urna. Praesent quis cursus orci. Cras lacinia molestie metus nec luctus. Etiam sit amet mauris sed dui accumsan sodales a id tellus. Fusce et metus vel libero pulvinar auctor a in nunc. Praesent nec mi quis lorem consequat tempor non et elit. Integer tristique commodo lorem sed pulvinar. Vestibulum eget molestie massa, ac accumsan orci. Ut posuere lacus quis arcu facilisis consectetur. Proin vitae sem sit amet dui convallis mollis et mollis purus.\n\nNunc id rhoncus dolor. Sed gravida, felis in bibendum interdum, ligula sapien adipiscing enim, ut tristique arcu lorem ac nibh. Sed at consectetur magna. Sed eget nisi libero. Donec vel sollicitudin arcu, quis dignissim lectus. Donec quis rhoncus arcu, id tristique nulla. Vestibulum eu erat risus. Suspendisse cursus nisi at est molestie lobortis. Nunc nibh est, tincidunt vel tincidunt scelerisque, vehicula quis massa. Aenean non sapien eu urna porttitor pharetra at non mi. Cras dolor tortor, varius non euismod ullamcorper, pretium eget odio. Phasellus in risus ac orci bibendum tempor. Cras lobortis semper magna sit amet facilisis.\n\nNulla lacinia sollicitudin nunc, sed viverra eros venenatis nec. Vivamus condimentum, felis sed consectetur laoreet, eros lectus ultricies nisl, sed vulputate felis libero id leo. Vestibulum quis faucibus sapien. Integer quis dui sollicitudin ligula bibendum bibendum id in purus. Praesent fringilla ultricies semper. Nullam elit mi, lobortis a quam eu, dictum tincidunt libero. Sed nec hendrerit purus, in aliquet magna. Cras sit amet luctus dolor. Donec ante mi, pretium vel lectus non, pulvinar molestie justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus accumsan quam lectus, ac ultricies nunc pellentesque et. Maecenas egestas sollicitudin venenatis. Mauris auctor tellus eu placerat accumsan. Nulla in mauris a risus ultricies ultrices vitae vel lacus. Aliquam eleifend, ante sit amet consectetur venenatis, orci nisi venenatis ligula, nec posuere massa augue quis sem. Nulla et lorem id ipsum laoreet posuere.\n\nUt ac suscipit diam. Vestibulum id sem ullamcorper mauris molestie egestas at sed turpis. Nam dapibus viverra magna, a accumsan urna pulvinar eget. Nullam lobortis ligula laoreet, aliquam tortor sit amet, fermentum tellus. Nunc sapien libero, porttitor nec est non, tempus elementum quam. Etiam eget risus volutpat, lacinia purus vitae, venenatis risus. Sed sodales ultrices sapien ac molestie. Fusce vestibulum pulvinar orci elementum congue. Donec ac orci porttitor, pretium tortor at, tristique mauris. In hac habitasse platea dictumst. Vestibulum eget metus ut nulla mattis consequat. Suspendisse at nunc nisi. Quisque tempor ullamcorper dui vel aliquam."], ["post_slug", "test-post-0"], ["post_title", "Test Post 0"], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("category_slug", "category_title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_slug", "test-category-1"], ["category_title", "Test Category 1"], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("author_id", "category_id", "created_at", "post_body", "post_slug", "post_title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author_id", 1], ["category_id", 1], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["post_body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec ligula lacinia, vehicula ante convallis, ullamcorper velit. Vestibulum eu viverra nunc. Nunc ac lobortis diam. Phasellus placerat nibh vel tempor sodales. Mauris pellentesque ornare odio, quis faucibus orci tempor et. Donec tincidunt mi interdum, elementum est rhoncus, lacinia neque. Fusce pharetra, augue semper malesuada suscipit, elit elit semper mi, eget luctus libero libero non dolor. Morbi ac sapien lacinia, pellentesque dolor adipiscing, volutpat risus. Donec id odio laoreet, adipiscing elit id, sollicitudin nunc. Pellentesque vel orci a arcu ornare placerat vel vel lorem. Nulla accumsan varius ullamcorper. Nullam lobortis quam nisi, ac volutpat odio pretium ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n<MORE>\nMorbi tincidunt a sem quis ullamcorper. Cras sit amet eros elit. Donec faucibus ipsum in lobortis aliquet. Nullam sed fermentum urna. Praesent quis cursus orci. Cras lacinia molestie metus nec luctus. Etiam sit amet mauris sed dui accumsan sodales a id tellus. Fusce et metus vel libero pulvinar auctor a in nunc. Praesent nec mi quis lorem consequat tempor non et elit. Integer tristique commodo lorem sed pulvinar. Vestibulum eget molestie massa, ac accumsan orci. Ut posuere lacus quis arcu facilisis consectetur. Proin vitae sem sit amet dui convallis mollis et mollis purus.\n\nNunc id rhoncus dolor. Sed gravida, felis in bibendum interdum, ligula sapien adipiscing enim, ut tristique arcu lorem ac nibh. Sed at consectetur magna. Sed eget nisi libero. Donec vel sollicitudin arcu, quis dignissim lectus. Donec quis rhoncus arcu, id tristique nulla. Vestibulum eu erat risus. Suspendisse cursus nisi at est molestie lobortis. Nunc nibh est, tincidunt vel tincidunt scelerisque, vehicula quis massa. Aenean non sapien eu urna porttitor pharetra at non mi. Cras dolor tortor, varius non euismod ullamcorper, pretium eget odio. Phasellus in risus ac orci bibendum tempor. Cras lobortis semper magna sit amet facilisis.\n\nNulla lacinia sollicitudin nunc, sed viverra eros venenatis nec. Vivamus condimentum, felis sed consectetur laoreet, eros lectus ultricies nisl, sed vulputate felis libero id leo. Vestibulum quis faucibus sapien. Integer quis dui sollicitudin ligula bibendum bibendum id in purus. Praesent fringilla ultricies semper. Nullam elit mi, lobortis a quam eu, dictum tincidunt libero. Sed nec hendrerit purus, in aliquet magna. Cras sit amet luctus dolor. Donec ante mi, pretium vel lectus non, pulvinar molestie justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus accumsan quam lectus, ac ultricies nunc pellentesque et. Maecenas egestas sollicitudin venenatis. Mauris auctor tellus eu placerat accumsan. Nulla in mauris a risus ultricies ultrices vitae vel lacus. Aliquam eleifend, ante sit amet consectetur venenatis, orci nisi venenatis ligula, nec posuere massa augue quis sem. Nulla et lorem id ipsum laoreet posuere.\n\nUt ac suscipit diam. Vestibulum id sem ullamcorper mauris molestie egestas at sed turpis. Nam dapibus viverra magna, a accumsan urna pulvinar eget. Nullam lobortis ligula laoreet, aliquam tortor sit amet, fermentum tellus. Nunc sapien libero, porttitor nec est non, tempus elementum quam. Etiam eget risus volutpat, lacinia purus vitae, venenatis risus. Sed sodales ultrices sapien ac molestie. Fusce vestibulum pulvinar orci elementum congue. Donec ac orci porttitor, pretium tortor at, tristique mauris. In hac habitasse platea dictumst. Vestibulum eget metus ut nulla mattis consequat. Suspendisse at nunc nisi. Quisque tempor ullamcorper dui vel aliquam."], ["post_slug", "test-post-1"], ["post_title", "Test Post 1"], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("category_slug", "category_title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_slug", "test-category-2"], ["category_title", "Test Category 2"], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("author_id", "category_id", "created_at", "post_body", "post_slug", "post_title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author_id", 1], ["category_id", 2], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["post_body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec ligula lacinia, vehicula ante convallis, ullamcorper velit. Vestibulum eu viverra nunc. Nunc ac lobortis diam. Phasellus placerat nibh vel tempor sodales. Mauris pellentesque ornare odio, quis faucibus orci tempor et. Donec tincidunt mi interdum, elementum est rhoncus, lacinia neque. Fusce pharetra, augue semper malesuada suscipit, elit elit semper mi, eget luctus libero libero non dolor. Morbi ac sapien lacinia, pellentesque dolor adipiscing, volutpat risus. Donec id odio laoreet, adipiscing elit id, sollicitudin nunc. Pellentesque vel orci a arcu ornare placerat vel vel lorem. Nulla accumsan varius ullamcorper. Nullam lobortis quam nisi, ac volutpat odio pretium ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n<MORE>\nMorbi tincidunt a sem quis ullamcorper. Cras sit amet eros elit. Donec faucibus ipsum in lobortis aliquet. Nullam sed fermentum urna. Praesent quis cursus orci. Cras lacinia molestie metus nec luctus. Etiam sit amet mauris sed dui accumsan sodales a id tellus. Fusce et metus vel libero pulvinar auctor a in nunc. Praesent nec mi quis lorem consequat tempor non et elit. Integer tristique commodo lorem sed pulvinar. Vestibulum eget molestie massa, ac accumsan orci. Ut posuere lacus quis arcu facilisis consectetur. Proin vitae sem sit amet dui convallis mollis et mollis purus.\n\nNunc id rhoncus dolor. Sed gravida, felis in bibendum interdum, ligula sapien adipiscing enim, ut tristique arcu lorem ac nibh. Sed at consectetur magna. Sed eget nisi libero. Donec vel sollicitudin arcu, quis dignissim lectus. Donec quis rhoncus arcu, id tristique nulla. Vestibulum eu erat risus. Suspendisse cursus nisi at est molestie lobortis. Nunc nibh est, tincidunt vel tincidunt scelerisque, vehicula quis massa. Aenean non sapien eu urna porttitor pharetra at non mi. Cras dolor tortor, varius non euismod ullamcorper, pretium eget odio. Phasellus in risus ac orci bibendum tempor. Cras lobortis semper magna sit amet facilisis.\n\nNulla lacinia sollicitudin nunc, sed viverra eros venenatis nec. Vivamus condimentum, felis sed consectetur laoreet, eros lectus ultricies nisl, sed vulputate felis libero id leo. Vestibulum quis faucibus sapien. Integer quis dui sollicitudin ligula bibendum bibendum id in purus. Praesent fringilla ultricies semper. Nullam elit mi, lobortis a quam eu, dictum tincidunt libero. Sed nec hendrerit purus, in aliquet magna. Cras sit amet luctus dolor. Donec ante mi, pretium vel lectus non, pulvinar molestie justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus accumsan quam lectus, ac ultricies nunc pellentesque et. Maecenas egestas sollicitudin venenatis. Mauris auctor tellus eu placerat accumsan. Nulla in mauris a risus ultricies ultrices vitae vel lacus. Aliquam eleifend, ante sit amet consectetur venenatis, orci nisi venenatis ligula, nec posuere massa augue quis sem. Nulla et lorem id ipsum laoreet posuere.\n\nUt ac suscipit diam. Vestibulum id sem ullamcorper mauris molestie egestas at sed turpis. Nam dapibus viverra magna, a accumsan urna pulvinar eget. Nullam lobortis ligula laoreet, aliquam tortor sit amet, fermentum tellus. Nunc sapien libero, porttitor nec est non, tempus elementum quam. Etiam eget risus volutpat, lacinia purus vitae, venenatis risus. Sed sodales ultrices sapien ac molestie. Fusce vestibulum pulvinar orci elementum congue. Donec ac orci porttitor, pretium tortor at, tristique mauris. In hac habitasse platea dictumst. Vestibulum eget metus ut nulla mattis consequat. Suspendisse at nunc nisi. Quisque tempor ullamcorper dui vel aliquam."], ["post_slug", "test-post-2"], ["post_title", "Test Post 2"], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("category_slug", "category_title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_slug", "test-category-3"], ["category_title", "Test Category 3"], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("author_id", "category_id", "created_at", "post_body", "post_slug", "post_title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author_id", 1], ["category_id", 3], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["post_body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec ligula lacinia, vehicula ante convallis, ullamcorper velit. Vestibulum eu viverra nunc. Nunc ac lobortis diam. Phasellus placerat nibh vel tempor sodales. Mauris pellentesque ornare odio, quis faucibus orci tempor et. Donec tincidunt mi interdum, elementum est rhoncus, lacinia neque. Fusce pharetra, augue semper malesuada suscipit, elit elit semper mi, eget luctus libero libero non dolor. Morbi ac sapien lacinia, pellentesque dolor adipiscing, volutpat risus. Donec id odio laoreet, adipiscing elit id, sollicitudin nunc. Pellentesque vel orci a arcu ornare placerat vel vel lorem. Nulla accumsan varius ullamcorper. Nullam lobortis quam nisi, ac volutpat odio pretium ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n<MORE>\nMorbi tincidunt a sem quis ullamcorper. Cras sit amet eros elit. Donec faucibus ipsum in lobortis aliquet. Nullam sed fermentum urna. Praesent quis cursus orci. Cras lacinia molestie metus nec luctus. Etiam sit amet mauris sed dui accumsan sodales a id tellus. Fusce et metus vel libero pulvinar auctor a in nunc. Praesent nec mi quis lorem consequat tempor non et elit. Integer tristique commodo lorem sed pulvinar. Vestibulum eget molestie massa, ac accumsan orci. Ut posuere lacus quis arcu facilisis consectetur. Proin vitae sem sit amet dui convallis mollis et mollis purus.\n\nNunc id rhoncus dolor. Sed gravida, felis in bibendum interdum, ligula sapien adipiscing enim, ut tristique arcu lorem ac nibh. Sed at consectetur magna. Sed eget nisi libero. Donec vel sollicitudin arcu, quis dignissim lectus. Donec quis rhoncus arcu, id tristique nulla. Vestibulum eu erat risus. Suspendisse cursus nisi at est molestie lobortis. Nunc nibh est, tincidunt vel tincidunt scelerisque, vehicula quis massa. Aenean non sapien eu urna porttitor pharetra at non mi. Cras dolor tortor, varius non euismod ullamcorper, pretium eget odio. Phasellus in risus ac orci bibendum tempor. Cras lobortis semper magna sit amet facilisis.\n\nNulla lacinia sollicitudin nunc, sed viverra eros venenatis nec. Vivamus condimentum, felis sed consectetur laoreet, eros lectus ultricies nisl, sed vulputate felis libero id leo. Vestibulum quis faucibus sapien. Integer quis dui sollicitudin ligula bibendum bibendum id in purus. Praesent fringilla ultricies semper. Nullam elit mi, lobortis a quam eu, dictum tincidunt libero. Sed nec hendrerit purus, in aliquet magna. Cras sit amet luctus dolor. Donec ante mi, pretium vel lectus non, pulvinar molestie justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus accumsan quam lectus, ac ultricies nunc pellentesque et. Maecenas egestas sollicitudin venenatis. Mauris auctor tellus eu placerat accumsan. Nulla in mauris a risus ultricies ultrices vitae vel lacus. Aliquam eleifend, ante sit amet consectetur venenatis, orci nisi venenatis ligula, nec posuere massa augue quis sem. Nulla et lorem id ipsum laoreet posuere.\n\nUt ac suscipit diam. Vestibulum id sem ullamcorper mauris molestie egestas at sed turpis. Nam dapibus viverra magna, a accumsan urna pulvinar eget. Nullam lobortis ligula laoreet, aliquam tortor sit amet, fermentum tellus. Nunc sapien libero, porttitor nec est non, tempus elementum quam. Etiam eget risus volutpat, lacinia purus vitae, venenatis risus. Sed sodales ultrices sapien ac molestie. Fusce vestibulum pulvinar orci elementum congue. Donec ac orci porttitor, pretium tortor at, tristique mauris. In hac habitasse platea dictumst. Vestibulum eget metus ut nulla mattis consequat. Suspendisse at nunc nisi. Quisque tempor ullamcorper dui vel aliquam."], ["post_slug", "test-post-3"], ["post_title", "Test Post 3"], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("category_slug", "category_title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_slug", "test-category-4"], ["category_title", "Test Category 4"], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("author_id", "category_id", "created_at", "post_body", "post_slug", "post_title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author_id", 1], ["category_id", 4], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["post_body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec ligula lacinia, vehicula ante convallis, ullamcorper velit. Vestibulum eu viverra nunc. Nunc ac lobortis diam. Phasellus placerat nibh vel tempor sodales. Mauris pellentesque ornare odio, quis faucibus orci tempor et. Donec tincidunt mi interdum, elementum est rhoncus, lacinia neque. Fusce pharetra, augue semper malesuada suscipit, elit elit semper mi, eget luctus libero libero non dolor. Morbi ac sapien lacinia, pellentesque dolor adipiscing, volutpat risus. Donec id odio laoreet, adipiscing elit id, sollicitudin nunc. Pellentesque vel orci a arcu ornare placerat vel vel lorem. Nulla accumsan varius ullamcorper. Nullam lobortis quam nisi, ac volutpat odio pretium ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n<MORE>\nMorbi tincidunt a sem quis ullamcorper. Cras sit amet eros elit. Donec faucibus ipsum in lobortis aliquet. Nullam sed fermentum urna. Praesent quis cursus orci. Cras lacinia molestie metus nec luctus. Etiam sit amet mauris sed dui accumsan sodales a id tellus. Fusce et metus vel libero pulvinar auctor a in nunc. Praesent nec mi quis lorem consequat tempor non et elit. Integer tristique commodo lorem sed pulvinar. Vestibulum eget molestie massa, ac accumsan orci. Ut posuere lacus quis arcu facilisis consectetur. Proin vitae sem sit amet dui convallis mollis et mollis purus.\n\nNunc id rhoncus dolor. Sed gravida, felis in bibendum interdum, ligula sapien adipiscing enim, ut tristique arcu lorem ac nibh. Sed at consectetur magna. Sed eget nisi libero. Donec vel sollicitudin arcu, quis dignissim lectus. Donec quis rhoncus arcu, id tristique nulla. Vestibulum eu erat risus. Suspendisse cursus nisi at est molestie lobortis. Nunc nibh est, tincidunt vel tincidunt scelerisque, vehicula quis massa. Aenean non sapien eu urna porttitor pharetra at non mi. Cras dolor tortor, varius non euismod ullamcorper, pretium eget odio. Phasellus in risus ac orci bibendum tempor. Cras lobortis semper magna sit amet facilisis.\n\nNulla lacinia sollicitudin nunc, sed viverra eros venenatis nec. Vivamus condimentum, felis sed consectetur laoreet, eros lectus ultricies nisl, sed vulputate felis libero id leo. Vestibulum quis faucibus sapien. Integer quis dui sollicitudin ligula bibendum bibendum id in purus. Praesent fringilla ultricies semper. Nullam elit mi, lobortis a quam eu, dictum tincidunt libero. Sed nec hendrerit purus, in aliquet magna. Cras sit amet luctus dolor. Donec ante mi, pretium vel lectus non, pulvinar molestie justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus accumsan quam lectus, ac ultricies nunc pellentesque et. Maecenas egestas sollicitudin venenatis. Mauris auctor tellus eu placerat accumsan. Nulla in mauris a risus ultricies ultrices vitae vel lacus. Aliquam eleifend, ante sit amet consectetur venenatis, orci nisi venenatis ligula, nec posuere massa augue quis sem. Nulla et lorem id ipsum laoreet posuere.\n\nUt ac suscipit diam. Vestibulum id sem ullamcorper mauris molestie egestas at sed turpis. Nam dapibus viverra magna, a accumsan urna pulvinar eget. Nullam lobortis ligula laoreet, aliquam tortor sit amet, fermentum tellus. Nunc sapien libero, porttitor nec est non, tempus elementum quam. Etiam eget risus volutpat, lacinia purus vitae, venenatis risus. Sed sodales ultrices sapien ac molestie. Fusce vestibulum pulvinar orci elementum congue. Donec ac orci porttitor, pretium tortor at, tristique mauris. In hac habitasse platea dictumst. Vestibulum eget metus ut nulla mattis consequat. Suspendisse at nunc nisi. Quisque tempor ullamcorper dui vel aliquam."], ["post_slug", "test-post-4"], ["post_title", "Test Post 4"], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("category_slug", "category_title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_slug", "test-category-5"], ["category_title", "Test Category 5"], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("author_id", "category_id", "created_at", "post_body", "post_slug", "post_title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author_id", 1], ["category_id", 5], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["post_body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec ligula lacinia, vehicula ante convallis, ullamcorper velit. Vestibulum eu viverra nunc. Nunc ac lobortis diam. Phasellus placerat nibh vel tempor sodales. Mauris pellentesque ornare odio, quis faucibus orci tempor et. Donec tincidunt mi interdum, elementum est rhoncus, lacinia neque. Fusce pharetra, augue semper malesuada suscipit, elit elit semper mi, eget luctus libero libero non dolor. Morbi ac sapien lacinia, pellentesque dolor adipiscing, volutpat risus. Donec id odio laoreet, adipiscing elit id, sollicitudin nunc. Pellentesque vel orci a arcu ornare placerat vel vel lorem. Nulla accumsan varius ullamcorper. Nullam lobortis quam nisi, ac volutpat odio pretium ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n<MORE>\nMorbi tincidunt a sem quis ullamcorper. Cras sit amet eros elit. Donec faucibus ipsum in lobortis aliquet. Nullam sed fermentum urna. Praesent quis cursus orci. Cras lacinia molestie metus nec luctus. Etiam sit amet mauris sed dui accumsan sodales a id tellus. Fusce et metus vel libero pulvinar auctor a in nunc. Praesent nec mi quis lorem consequat tempor non et elit. Integer tristique commodo lorem sed pulvinar. Vestibulum eget molestie massa, ac accumsan orci. Ut posuere lacus quis arcu facilisis consectetur. Proin vitae sem sit amet dui convallis mollis et mollis purus.\n\nNunc id rhoncus dolor. Sed gravida, felis in bibendum interdum, ligula sapien adipiscing enim, ut tristique arcu lorem ac nibh. Sed at consectetur magna. Sed eget nisi libero. Donec vel sollicitudin arcu, quis dignissim lectus. Donec quis rhoncus arcu, id tristique nulla. Vestibulum eu erat risus. Suspendisse cursus nisi at est molestie lobortis. Nunc nibh est, tincidunt vel tincidunt scelerisque, vehicula quis massa. Aenean non sapien eu urna porttitor pharetra at non mi. Cras dolor tortor, varius non euismod ullamcorper, pretium eget odio. Phasellus in risus ac orci bibendum tempor. Cras lobortis semper magna sit amet facilisis.\n\nNulla lacinia sollicitudin nunc, sed viverra eros venenatis nec. Vivamus condimentum, felis sed consectetur laoreet, eros lectus ultricies nisl, sed vulputate felis libero id leo. Vestibulum quis faucibus sapien. Integer quis dui sollicitudin ligula bibendum bibendum id in purus. Praesent fringilla ultricies semper. Nullam elit mi, lobortis a quam eu, dictum tincidunt libero. Sed nec hendrerit purus, in aliquet magna. Cras sit amet luctus dolor. Donec ante mi, pretium vel lectus non, pulvinar molestie justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus accumsan quam lectus, ac ultricies nunc pellentesque et. Maecenas egestas sollicitudin venenatis. Mauris auctor tellus eu placerat accumsan. Nulla in mauris a risus ultricies ultrices vitae vel lacus. Aliquam eleifend, ante sit amet consectetur venenatis, orci nisi venenatis ligula, nec posuere massa augue quis sem. Nulla et lorem id ipsum laoreet posuere.\n\nUt ac suscipit diam. Vestibulum id sem ullamcorper mauris molestie egestas at sed turpis. Nam dapibus viverra magna, a accumsan urna pulvinar eget. Nullam lobortis ligula laoreet, aliquam tortor sit amet, fermentum tellus. Nunc sapien libero, porttitor nec est non, tempus elementum quam. Etiam eget risus volutpat, lacinia purus vitae, venenatis risus. Sed sodales ultrices sapien ac molestie. Fusce vestibulum pulvinar orci elementum congue. Donec ac orci porttitor, pretium tortor at, tristique mauris. In hac habitasse platea dictumst. Vestibulum eget metus ut nulla mattis consequat. Suspendisse at nunc nisi. Quisque tempor ullamcorper dui vel aliquam."], ["post_slug", "test-post-5"], ["post_title", "Test Post 5"], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("category_slug", "category_title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_slug", "test-category-6"], ["category_title", "Test Category 6"], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("author_id", "category_id", "created_at", "post_body", "post_slug", "post_title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author_id", 1], ["category_id", 6], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["post_body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec ligula lacinia, vehicula ante convallis, ullamcorper velit. Vestibulum eu viverra nunc. Nunc ac lobortis diam. Phasellus placerat nibh vel tempor sodales. Mauris pellentesque ornare odio, quis faucibus orci tempor et. Donec tincidunt mi interdum, elementum est rhoncus, lacinia neque. Fusce pharetra, augue semper malesuada suscipit, elit elit semper mi, eget luctus libero libero non dolor. Morbi ac sapien lacinia, pellentesque dolor adipiscing, volutpat risus. Donec id odio laoreet, adipiscing elit id, sollicitudin nunc. Pellentesque vel orci a arcu ornare placerat vel vel lorem. Nulla accumsan varius ullamcorper. Nullam lobortis quam nisi, ac volutpat odio pretium ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n<MORE>\nMorbi tincidunt a sem quis ullamcorper. Cras sit amet eros elit. Donec faucibus ipsum in lobortis aliquet. Nullam sed fermentum urna. Praesent quis cursus orci. Cras lacinia molestie metus nec luctus. Etiam sit amet mauris sed dui accumsan sodales a id tellus. Fusce et metus vel libero pulvinar auctor a in nunc. Praesent nec mi quis lorem consequat tempor non et elit. Integer tristique commodo lorem sed pulvinar. Vestibulum eget molestie massa, ac accumsan orci. Ut posuere lacus quis arcu facilisis consectetur. Proin vitae sem sit amet dui convallis mollis et mollis purus.\n\nNunc id rhoncus dolor. Sed gravida, felis in bibendum interdum, ligula sapien adipiscing enim, ut tristique arcu lorem ac nibh. Sed at consectetur magna. Sed eget nisi libero. Donec vel sollicitudin arcu, quis dignissim lectus. Donec quis rhoncus arcu, id tristique nulla. Vestibulum eu erat risus. Suspendisse cursus nisi at est molestie lobortis. Nunc nibh est, tincidunt vel tincidunt scelerisque, vehicula quis massa. Aenean non sapien eu urna porttitor pharetra at non mi. Cras dolor tortor, varius non euismod ullamcorper, pretium eget odio. Phasellus in risus ac orci bibendum tempor. Cras lobortis semper magna sit amet facilisis.\n\nNulla lacinia sollicitudin nunc, sed viverra eros venenatis nec. Vivamus condimentum, felis sed consectetur laoreet, eros lectus ultricies nisl, sed vulputate felis libero id leo. Vestibulum quis faucibus sapien. Integer quis dui sollicitudin ligula bibendum bibendum id in purus. Praesent fringilla ultricies semper. Nullam elit mi, lobortis a quam eu, dictum tincidunt libero. Sed nec hendrerit purus, in aliquet magna. Cras sit amet luctus dolor. Donec ante mi, pretium vel lectus non, pulvinar molestie justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus accumsan quam lectus, ac ultricies nunc pellentesque et. Maecenas egestas sollicitudin venenatis. Mauris auctor tellus eu placerat accumsan. Nulla in mauris a risus ultricies ultrices vitae vel lacus. Aliquam eleifend, ante sit amet consectetur venenatis, orci nisi venenatis ligula, nec posuere massa augue quis sem. Nulla et lorem id ipsum laoreet posuere.\n\nUt ac suscipit diam. Vestibulum id sem ullamcorper mauris molestie egestas at sed turpis. Nam dapibus viverra magna, a accumsan urna pulvinar eget. Nullam lobortis ligula laoreet, aliquam tortor sit amet, fermentum tellus. Nunc sapien libero, porttitor nec est non, tempus elementum quam. Etiam eget risus volutpat, lacinia purus vitae, venenatis risus. Sed sodales ultrices sapien ac molestie. Fusce vestibulum pulvinar orci elementum congue. Donec ac orci porttitor, pretium tortor at, tristique mauris. In hac habitasse platea dictumst. Vestibulum eget metus ut nulla mattis consequat. Suspendisse at nunc nisi. Quisque tempor ullamcorper dui vel aliquam."], ["post_slug", "test-post-6"], ["post_title", "Test Post 6"], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("category_slug", "category_title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_slug", "test-category-7"], ["category_title", "Test Category 7"], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("author_id", "category_id", "created_at", "post_body", "post_slug", "post_title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author_id", 1], ["category_id", 7], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["post_body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec ligula lacinia, vehicula ante convallis, ullamcorper velit. Vestibulum eu viverra nunc. Nunc ac lobortis diam. Phasellus placerat nibh vel tempor sodales. Mauris pellentesque ornare odio, quis faucibus orci tempor et. Donec tincidunt mi interdum, elementum est rhoncus, lacinia neque. Fusce pharetra, augue semper malesuada suscipit, elit elit semper mi, eget luctus libero libero non dolor. Morbi ac sapien lacinia, pellentesque dolor adipiscing, volutpat risus. Donec id odio laoreet, adipiscing elit id, sollicitudin nunc. Pellentesque vel orci a arcu ornare placerat vel vel lorem. Nulla accumsan varius ullamcorper. Nullam lobortis quam nisi, ac volutpat odio pretium ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n<MORE>\nMorbi tincidunt a sem quis ullamcorper. Cras sit amet eros elit. Donec faucibus ipsum in lobortis aliquet. Nullam sed fermentum urna. Praesent quis cursus orci. Cras lacinia molestie metus nec luctus. Etiam sit amet mauris sed dui accumsan sodales a id tellus. Fusce et metus vel libero pulvinar auctor a in nunc. Praesent nec mi quis lorem consequat tempor non et elit. Integer tristique commodo lorem sed pulvinar. Vestibulum eget molestie massa, ac accumsan orci. Ut posuere lacus quis arcu facilisis consectetur. Proin vitae sem sit amet dui convallis mollis et mollis purus.\n\nNunc id rhoncus dolor. Sed gravida, felis in bibendum interdum, ligula sapien adipiscing enim, ut tristique arcu lorem ac nibh. Sed at consectetur magna. Sed eget nisi libero. Donec vel sollicitudin arcu, quis dignissim lectus. Donec quis rhoncus arcu, id tristique nulla. Vestibulum eu erat risus. Suspendisse cursus nisi at est molestie lobortis. Nunc nibh est, tincidunt vel tincidunt scelerisque, vehicula quis massa. Aenean non sapien eu urna porttitor pharetra at non mi. Cras dolor tortor, varius non euismod ullamcorper, pretium eget odio. Phasellus in risus ac orci bibendum tempor. Cras lobortis semper magna sit amet facilisis.\n\nNulla lacinia sollicitudin nunc, sed viverra eros venenatis nec. Vivamus condimentum, felis sed consectetur laoreet, eros lectus ultricies nisl, sed vulputate felis libero id leo. Vestibulum quis faucibus sapien. Integer quis dui sollicitudin ligula bibendum bibendum id in purus. Praesent fringilla ultricies semper. Nullam elit mi, lobortis a quam eu, dictum tincidunt libero. Sed nec hendrerit purus, in aliquet magna. Cras sit amet luctus dolor. Donec ante mi, pretium vel lectus non, pulvinar molestie justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus accumsan quam lectus, ac ultricies nunc pellentesque et. Maecenas egestas sollicitudin venenatis. Mauris auctor tellus eu placerat accumsan. Nulla in mauris a risus ultricies ultrices vitae vel lacus. Aliquam eleifend, ante sit amet consectetur venenatis, orci nisi venenatis ligula, nec posuere massa augue quis sem. Nulla et lorem id ipsum laoreet posuere.\n\nUt ac suscipit diam. Vestibulum id sem ullamcorper mauris molestie egestas at sed turpis. Nam dapibus viverra magna, a accumsan urna pulvinar eget. Nullam lobortis ligula laoreet, aliquam tortor sit amet, fermentum tellus. Nunc sapien libero, porttitor nec est non, tempus elementum quam. Etiam eget risus volutpat, lacinia purus vitae, venenatis risus. Sed sodales ultrices sapien ac molestie. Fusce vestibulum pulvinar orci elementum congue. Donec ac orci porttitor, pretium tortor at, tristique mauris. In hac habitasse platea dictumst. Vestibulum eget metus ut nulla mattis consequat. Suspendisse at nunc nisi. Quisque tempor ullamcorper dui vel aliquam."], ["post_slug", "test-post-7"], ["post_title", "Test Post 7"], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("category_slug", "category_title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_slug", "test-category-8"], ["category_title", "Test Category 8"], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("author_id", "category_id", "created_at", "post_body", "post_slug", "post_title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author_id", 1], ["category_id", 8], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["post_body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec ligula lacinia, vehicula ante convallis, ullamcorper velit. Vestibulum eu viverra nunc. Nunc ac lobortis diam. Phasellus placerat nibh vel tempor sodales. Mauris pellentesque ornare odio, quis faucibus orci tempor et. Donec tincidunt mi interdum, elementum est rhoncus, lacinia neque. Fusce pharetra, augue semper malesuada suscipit, elit elit semper mi, eget luctus libero libero non dolor. Morbi ac sapien lacinia, pellentesque dolor adipiscing, volutpat risus. Donec id odio laoreet, adipiscing elit id, sollicitudin nunc. Pellentesque vel orci a arcu ornare placerat vel vel lorem. Nulla accumsan varius ullamcorper. Nullam lobortis quam nisi, ac volutpat odio pretium ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n<MORE>\nMorbi tincidunt a sem quis ullamcorper. Cras sit amet eros elit. Donec faucibus ipsum in lobortis aliquet. Nullam sed fermentum urna. Praesent quis cursus orci. Cras lacinia molestie metus nec luctus. Etiam sit amet mauris sed dui accumsan sodales a id tellus. Fusce et metus vel libero pulvinar auctor a in nunc. Praesent nec mi quis lorem consequat tempor non et elit. Integer tristique commodo lorem sed pulvinar. Vestibulum eget molestie massa, ac accumsan orci. Ut posuere lacus quis arcu facilisis consectetur. Proin vitae sem sit amet dui convallis mollis et mollis purus.\n\nNunc id rhoncus dolor. Sed gravida, felis in bibendum interdum, ligula sapien adipiscing enim, ut tristique arcu lorem ac nibh. Sed at consectetur magna. Sed eget nisi libero. Donec vel sollicitudin arcu, quis dignissim lectus. Donec quis rhoncus arcu, id tristique nulla. Vestibulum eu erat risus. Suspendisse cursus nisi at est molestie lobortis. Nunc nibh est, tincidunt vel tincidunt scelerisque, vehicula quis massa. Aenean non sapien eu urna porttitor pharetra at non mi. Cras dolor tortor, varius non euismod ullamcorper, pretium eget odio. Phasellus in risus ac orci bibendum tempor. Cras lobortis semper magna sit amet facilisis.\n\nNulla lacinia sollicitudin nunc, sed viverra eros venenatis nec. Vivamus condimentum, felis sed consectetur laoreet, eros lectus ultricies nisl, sed vulputate felis libero id leo. Vestibulum quis faucibus sapien. Integer quis dui sollicitudin ligula bibendum bibendum id in purus. Praesent fringilla ultricies semper. Nullam elit mi, lobortis a quam eu, dictum tincidunt libero. Sed nec hendrerit purus, in aliquet magna. Cras sit amet luctus dolor. Donec ante mi, pretium vel lectus non, pulvinar molestie justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus accumsan quam lectus, ac ultricies nunc pellentesque et. Maecenas egestas sollicitudin venenatis. Mauris auctor tellus eu placerat accumsan. Nulla in mauris a risus ultricies ultrices vitae vel lacus. Aliquam eleifend, ante sit amet consectetur venenatis, orci nisi venenatis ligula, nec posuere massa augue quis sem. Nulla et lorem id ipsum laoreet posuere.\n\nUt ac suscipit diam. Vestibulum id sem ullamcorper mauris molestie egestas at sed turpis. Nam dapibus viverra magna, a accumsan urna pulvinar eget. Nullam lobortis ligula laoreet, aliquam tortor sit amet, fermentum tellus. Nunc sapien libero, porttitor nec est non, tempus elementum quam. Etiam eget risus volutpat, lacinia purus vitae, venenatis risus. Sed sodales ultrices sapien ac molestie. Fusce vestibulum pulvinar orci elementum congue. Donec ac orci porttitor, pretium tortor at, tristique mauris. In hac habitasse platea dictumst. Vestibulum eget metus ut nulla mattis consequat. Suspendisse at nunc nisi. Quisque tempor ullamcorper dui vel aliquam."], ["post_slug", "test-post-8"], ["post_title", "Test Post 8"], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("category_slug", "category_title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_slug", "test-category-9"], ["category_title", "Test Category 9"], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("author_id", "category_id", "created_at", "post_body", "post_slug", "post_title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author_id", 1], ["category_id", 9], ["created_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00], ["post_body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec ligula lacinia, vehicula ante convallis, ullamcorper velit. Vestibulum eu viverra nunc. Nunc ac lobortis diam. Phasellus placerat nibh vel tempor sodales. Mauris pellentesque ornare odio, quis faucibus orci tempor et. Donec tincidunt mi interdum, elementum est rhoncus, lacinia neque. Fusce pharetra, augue semper malesuada suscipit, elit elit semper mi, eget luctus libero libero non dolor. Morbi ac sapien lacinia, pellentesque dolor adipiscing, volutpat risus. Donec id odio laoreet, adipiscing elit id, sollicitudin nunc. Pellentesque vel orci a arcu ornare placerat vel vel lorem. Nulla accumsan varius ullamcorper. Nullam lobortis quam nisi, ac volutpat odio pretium ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n<MORE>\nMorbi tincidunt a sem quis ullamcorper. Cras sit amet eros elit. Donec faucibus ipsum in lobortis aliquet. Nullam sed fermentum urna. Praesent quis cursus orci. Cras lacinia molestie metus nec luctus. Etiam sit amet mauris sed dui accumsan sodales a id tellus. Fusce et metus vel libero pulvinar auctor a in nunc. Praesent nec mi quis lorem consequat tempor non et elit. Integer tristique commodo lorem sed pulvinar. Vestibulum eget molestie massa, ac accumsan orci. Ut posuere lacus quis arcu facilisis consectetur. Proin vitae sem sit amet dui convallis mollis et mollis purus.\n\nNunc id rhoncus dolor. Sed gravida, felis in bibendum interdum, ligula sapien adipiscing enim, ut tristique arcu lorem ac nibh. Sed at consectetur magna. Sed eget nisi libero. Donec vel sollicitudin arcu, quis dignissim lectus. Donec quis rhoncus arcu, id tristique nulla. Vestibulum eu erat risus. Suspendisse cursus nisi at est molestie lobortis. Nunc nibh est, tincidunt vel tincidunt scelerisque, vehicula quis massa. Aenean non sapien eu urna porttitor pharetra at non mi. Cras dolor tortor, varius non euismod ullamcorper, pretium eget odio. Phasellus in risus ac orci bibendum tempor. Cras lobortis semper magna sit amet facilisis.\n\nNulla lacinia sollicitudin nunc, sed viverra eros venenatis nec. Vivamus condimentum, felis sed consectetur laoreet, eros lectus ultricies nisl, sed vulputate felis libero id leo. Vestibulum quis faucibus sapien. Integer quis dui sollicitudin ligula bibendum bibendum id in purus. Praesent fringilla ultricies semper. Nullam elit mi, lobortis a quam eu, dictum tincidunt libero. Sed nec hendrerit purus, in aliquet magna. Cras sit amet luctus dolor. Donec ante mi, pretium vel lectus non, pulvinar molestie justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus accumsan quam lectus, ac ultricies nunc pellentesque et. Maecenas egestas sollicitudin venenatis. Mauris auctor tellus eu placerat accumsan. Nulla in mauris a risus ultricies ultrices vitae vel lacus. Aliquam eleifend, ante sit amet consectetur venenatis, orci nisi venenatis ligula, nec posuere massa augue quis sem. Nulla et lorem id ipsum laoreet posuere.\n\nUt ac suscipit diam. Vestibulum id sem ullamcorper mauris molestie egestas at sed turpis. Nam dapibus viverra magna, a accumsan urna pulvinar eget. Nullam lobortis ligula laoreet, aliquam tortor sit amet, fermentum tellus. Nunc sapien libero, porttitor nec est non, tempus elementum quam. Etiam eget risus volutpat, lacinia purus vitae, venenatis risus. Sed sodales ultrices sapien ac molestie. Fusce vestibulum pulvinar orci elementum congue. Donec ac orci porttitor, pretium tortor at, tristique mauris. In hac habitasse platea dictumst. Vestibulum eget metus ut nulla mattis consequat. Suspendisse at nunc nisi. Quisque tempor ullamcorper dui vel aliquam."], ["post_slug", "test-post-9"], ["post_title", "Test Post 9"], ["updated_at", Sat, 22 Mar 2014 01:31:11 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36mTag Load (3.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (67.7ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.8ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.2ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.7ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.6ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered index/index.html.erb within layouts/application (127.1ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+Completed 200 OK in 273ms (Views: 235.4ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 01:31:41 +0000
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2014-03-22 01:31:51 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 5[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 5]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (3.8ms)
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (27.4ms)
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.8ms)
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.5ms)
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts"
+  Rendered index/index.html.erb within layouts/application (53.8ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 8]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 10]]
+Completed 200 OK in 82ms (Views: 71.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:31:56 +0000
+Processing by IndexController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.9ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.2ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.1ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.2ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered index/index.html.erb within layouts/application (25.7ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+Completed 200 OK in 53ms (Views: 50.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:33:54 +0000
+Processing by IndexController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  Rendered index/_post.html.erb (38.1ms)
+  Rendered index/index.html.erb within layouts/application (40.6ms)
+Completed 500 Internal Server Error in 44ms
+
+ActionView::Template::Error (undefined local variable or method `str' for #<#<Class:0x007faefc60af60>:0x007faefd1badd8>):
+    1: <div class="blog-post">
+    2: 	<h4 class="blog-post-title"><%= p.post_title %></h4>
+    3: 	<%= p.post_body.slice(0..(str.index('<MORE>'))) %><br />
+    4: 	<hr>
+    5: 	<small>
+    6: 		<% p.tags.each do |t| %>
+  app/views/index/_post.html.erb:3:in `_app_views_index__post_html_erb__1173362029521706923_70194775095600'
+  app/views/index/index.html.erb:3:in `block in _app_views_index_index_html_erb__4479845608463324329_70194765290120'
+  app/views/index/index.html.erb:2:in `_app_views_index_index_html_erb__4479845608463324329_70194765290120'
+
+
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+Processing by IndexController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (3.2ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.3ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.3ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.3ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered index/index.html.erb within layouts/application (24.9ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+Completed 200 OK in 46ms (Views: 43.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:10 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:34:23 +0000
+Processing by IndexController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  Rendered index/_post.html.erb (1.8ms)
+  Rendered index/index.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (bad value for range):
+    1: <div class="blog-post">
+    2: 	<h4 class="blog-post-title"><%= p.post_title %></h4>
+    3: 	<%= p.post_body.slice(0..(p.post_body.index(' <MORE>'))) %><br />
+    4: 	<hr>
+    5: 	<small>
+    6: 		<% p.tags.each do |t| %>
+  app/views/index/_post.html.erb:3:in `_app_views_index__post_html_erb__1173362029521706923_70194775869260'
+  app/views/index/index.html.erb:3:in `block in _app_views_index_index_html_erb__4479845608463324329_70194765290120'
+  app/views/index/index.html.erb:2:in `_app_views_index_index_html_erb__4479845608463324329_70194765290120'
+
+
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:34:32 +0000
+Processing by IndexController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  Rendered index/_post.html.erb (1.6ms)
+  Rendered index/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (bad value for range):
+    1: <div class="blog-post">
+    2: 	<h4 class="blog-post-title"><%= p.post_title %></h4>
+    3: 	<%= p.post_body.slice(0..(p.post_body.index('\n<MORE>'))) %><br />
+    4: 	<hr>
+    5: 	<small>
+    6: 		<% p.tags.each do |t| %>
+  app/views/index/_post.html.erb:3:in `_app_views_index__post_html_erb__1173362029521706923_70194773890560'
+  app/views/index/index.html.erb:3:in `block in _app_views_index_index_html_erb__4479845608463324329_70194765290120'
+  app/views/index/index.html.erb:2:in `_app_views_index_index_html_erb__4479845608463324329_70194765290120'
+
+
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:34:38 +0000
+Processing by IndexController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 10]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (6.6ms)
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.3ms)
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.0ms)
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.5ms)
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (33.1ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  Rendered index/index.html.erb within layouts/application (62.3ms)
+  [1m[36mCategory Load (2.1ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 8]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 10]]
+Completed 200 OK in 86ms (Views: 80.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 01:34:39 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:35:47 +0000
+Processing by IndexController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  Rendered index/_post.html.erb (1.5ms)
+  Rendered index/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (wrong number of arguments(1 for 2)):
+    1: <div class="blog-post">
+    2: 	<h4 class="blog-post-title"><%= p.post_title %></h4>
+    3: 	<%= p.post_body.slice(0..(p.post_body.index('<MORE>'))).tr("<") %><br />
+    4: 	<hr>
+    5: 	<small>
+    6: 		<% p.tags.each do |t| %>
+  app/views/index/_post.html.erb:3:in `tr'
+  app/views/index/_post.html.erb:3:in `_app_views_index__post_html_erb__1173362029521706923_70194773855200'
+  app/views/index/index.html.erb:3:in `block in _app_views_index_index_html_erb__4479845608463324329_70194765290120'
+  app/views/index/index.html.erb:2:in `_app_views_index_index_html_erb__4479845608463324329_70194765290120'
+
+
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:36:05 +0000
+Processing by IndexController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 10]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (3.7ms)
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.3ms)
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (26.2ms)
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.7ms)
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts"
+  Rendered index/index.html.erb within layouts/application (51.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 8]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 10]]
+Completed 200 OK in 73ms (Views: 69.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 01:36:06 +0000
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2014-03-22 01:36:09 +0000
+Processing by IndexController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 5
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (5.4ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.4ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.0ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.0ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (1.9ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered index/index.html.erb within layouts/application (52.4ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+Completed 200 OK in 74ms (Views: 69.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:36:12 +0000
+Processing by IndexController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 10]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (3.0ms)
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.2ms)
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.0ms)
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.0ms)
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered index/_post.html.erb (2.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts"
+  Rendered index/index.html.erb within layouts/application (27.9ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 8]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 10]]
+Completed 200 OK in 52ms (Views: 49.2ms | ActiveRecord: 1.9ms)

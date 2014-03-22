@@ -15448,3 +15448,1454 @@ Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-03-22 14:48:45 +0000
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 14:48:45 +0000
+
+
+Started GET "/category/test-category-0" for 127.0.0.1 at 2014-03-22 14:50:25 +0000
+Processing by CategoryController#index as HTML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 2]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered category/_post.html.erb (22.1ms)
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered category/_post.html.erb (3.5ms)
+  Rendered category/index.html.erb within layouts/application (37.6ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+Completed 200 OK in 142ms (Views: 106.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:50:28 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 4ms
+
+ActionView::MissingTemplate (Missing template category/index, application/index with {:locale=>[:en], :formats=>[:xml], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/affix/Desktop/blog/app/views"
+  * "/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/kaminari-0.15.1/app/views"
+  * "/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/twitter-bootstrap-rails-2.2.8/app/views"
+):
+  actionpack (4.0.3) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.3) lib/action_view/lookup_context.rb:122:in `find'
+  actionpack (4.0.3) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.3) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.3) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (4.0.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.3) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.3) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:403:in `_run__2989452140595232777__process_action__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.3) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.3) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.3) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/error_collector.rb:55:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/agent_hooks.rb:32:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/browser_monitoring.rb:27:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/developer_mode.rb:45:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.3) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__4486002864838662493__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.2) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.2) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.2) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.2) lib/thin/connection.rb:53:in `process'
+  thin (1.6.2) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.2) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.2) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.3) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.3) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.3) lib/rails/commands.rb:71:in `tap'
+  railties (4.0.3) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:50:57 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1
+  Rendered category/index.xml.erb (0.7ms)
+Completed 200 OK in 10ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:51:23 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  Rendered category/index.xml.erb (0.6ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:52:08 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  Rendered category/index.xml.erb (1.9ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:52:32 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  Rendered category/index.xml.erb (1.7ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:53:29 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  Rendered category/index.xml.erb (2.5ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (bad value for range):
+     5: 	<% @posts.each do |p| %>
+     6: 	  <title><%= p.post_title %></title>
+     7: 	  <link>http://me-affix.hostr.pw/post/<%= p.post_slug %></link>
+     8: 	  <description><%= BlueCloth.new(p.post_body.slice(0..(p.post_body.index('<MORE>'))).tr("<", "")).to_html.html_safe %></description>
+     9: 	<% end %>
+    10: </channel>
+    11: 
+  app/views/category/index.xml.erb:8:in `block in _app_views_category_index_xml_erb__1768529349314949478_70331856933220'
+  app/views/category/index.xml.erb:5:in `_app_views_category_index_xml_erb__1768529349314949478_70331856933220'
+
+
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (50.1ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:54:35 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1
+ERROR: compiling _app_views_category_index_xml_erb__1768529349314949478_70331840824980 RAISED /Users/affix/Desktop/blog/app/views/category/index.xml.erb:14: unknown regexp options - chal
+unmatched close parenthesis: /description>
+	  <% end );@output_buffer.safe_append='
+';	 end 
+@output_buffer.safe_append='</
+/Users/affix/Desktop/blog/app/views/category/index.xml.erb:16: syntax error, unexpected '<'
+</rss>';@output_buffer.to_s
+ ^
+/Users/affix/Desktop/blog/app/views/category/index.xml.erb:16: unterminated regexp meets end of file
+Function body:           def _app_views_category_index_xml_erb__1768529349314949478_70331840824980(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "category/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+';	 @posts.each do |p| 
+@output_buffer.safe_append='	  <title>';@output_buffer.append=( p.post_title );@output_buffer.safe_append='</title>
+	  <link>http://me-affix.hostr.pw/post/';@output_buffer.append=( p.post_slug );@output_buffer.safe_append='</link>
+';	   begin 
+@output_buffer.safe_append='	  	<description>';@output_buffer.append=( BlueCloth.new(p.post_body.slice(0..(p.post_body.index('<MORE>'))).tr("<", "")).to_html.html_safe );@output_buffer.safe_append='</description>
+';	   rescue 
+@output_buffer.safe_append='	  	<description>';@output_buffer.append=( BlueCloth.new(p.post_body).to_html.html_safe </description>
+	  <% end );@output_buffer.safe_append='
+';	 end 
+@output_buffer.safe_append='</channel>
+
+</rss>';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:403:in `_run__2989452140595232777__process_action__callbacks'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/newrelic_rpm-3.7.3.204/lib/new_relic/rack/error_collector.rb:55:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/newrelic_rpm-3.7.3.204/lib/new_relic/rack/agent_hooks.rb:32:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/newrelic_rpm-3.7.3.204/lib/new_relic/rack/browser_monitoring.rb:27:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/newrelic_rpm-3.7.3.204/lib/new_relic/rack/developer_mode.rb:45:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/migration.rb:369:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__4486002864838662493__call__callbacks'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/thin-1.6.2/lib/thin/connection.rb:86:in `block in pre_process'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/thin-1.6.2/lib/thin/connection.rb:84:in `catch'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/thin-1.6.2/lib/thin/connection.rb:84:in `pre_process'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/thin-1.6.2/lib/thin/connection.rb:53:in `process'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/thin-1.6.2/lib/thin/connection.rb:39:in `receive_data'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/handler/thin.rb:16:in `run'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/server.rb:264:in `start'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/commands/server.rb:84:in `start'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/commands.rb:76:in `block in <top (required)>'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/commands.rb:71:in `tap'
+/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/commands.rb:71:in `<top (required)>'
+bin/rails:4:in `require'
+bin/rails:4:in `<main>'
+  Rendered category/index.xml.erb (69.7ms)
+Completed 500 Internal Server Error in 76ms
+
+ActionView::Template::Error (/Users/affix/Desktop/blog/app/views/category/index.xml.erb:14: unknown regexp options - chal
+unmatched close parenthesis: /description>
+	  <% end );@output_buffer.safe_append='
+';	 end 
+@output_buffer.safe_append='</
+/Users/affix/Desktop/blog/app/views/category/index.xml.erb:16: syntax error, unexpected '<'
+</rss>';@output_buffer.to_s
+ ^
+/Users/affix/Desktop/blog/app/views/category/index.xml.erb:16: unterminated regexp meets end of file):
+    11: 	  	<description><%= BlueCloth.new(p.post_body).to_html.html_safe </description>
+    12: 	  <% end %>
+    13: 	<% end %>
+    14: </channel>
+    15: 
+    16: </rss>
+  actionpack (4.0.3) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.3) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.3) lib/action_view/template.rb:248:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  actionpack (4.0.3) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.3) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.3) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.3) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.3) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.3) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.3) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (4.0.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.3) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.3) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:403:in `_run__2989452140595232777__process_action__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.3) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.3) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.3) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/error_collector.rb:55:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/agent_hooks.rb:32:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/browser_monitoring.rb:27:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/developer_mode.rb:45:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.3) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__4486002864838662493__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.2) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.2) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.2) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.2) lib/thin/connection.rb:53:in `process'
+  thin (1.6.2) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.2) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.2) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.3) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.3) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.3) lib/rails/commands.rb:71:in `tap'
+  railties (4.0.3) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:54:57 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (4.9ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:55:25 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (2.2ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:56:18 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (38.3ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:57:18 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (2.5ms)
+Completed 200 OK in 11ms (Views: 5.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:57:18 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (1.4ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:57:19 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (1.2ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:57:19 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (1.3ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:58:16 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (2.3ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:58:17 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (1.3ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:58:44 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (5.7ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:58:45 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (1.5ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:59:10 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (2.4ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:59:11 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (1.6ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:59:12 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (1.4ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:59:15 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (1.4ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:59:33 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (2.3ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 14:59:39 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (1.6ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 15:00:19 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (2.6ms)
+Completed 200 OK in 11ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 15:00:36 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (1.6ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 15:00:59 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (1.8ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 15:01:36 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (2.7ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 15:01:42 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (1.7ms)
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 15:02:27 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (2.1ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/test-category-0.xml" for 127.0.0.1 at 2014-03-22 15:02:36 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-0') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  Rendered category/index.xml.erb (1.4ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/a;;.xml" for 127.0.0.1 at 2014-03-22 15:03:56 +0000
+
+ActionController::RoutingError (No route matches [GET] "/a;;.xml"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.2) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.2) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.2) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.2) lib/thin/connection.rb:53:in `process'
+  thin (1.6.2) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.2) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.2) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.3) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.3) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.3) lib/rails/commands.rb:71:in `tap'
+  railties (4.0.3) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (30.8ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (52.1ms)
+
+
+Started GET "/all.xml" for 127.0.0.1 at 2014-03-22 15:04:01 +0000
+Processing by IndexController#index as XML
+Completed 500 Internal Server Error in 31ms
+
+ActionView::MissingTemplate (Missing template index/index, application/index with {:locale=>[:en], :formats=>[:xml], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/affix/Desktop/blog/app/views"
+  * "/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/kaminari-0.15.1/app/views"
+  * "/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/twitter-bootstrap-rails-2.2.8/app/views"
+):
+  actionpack (4.0.3) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.3) lib/action_view/lookup_context.rb:122:in `find'
+  actionpack (4.0.3) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.3) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.3) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (4.0.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.3) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.3) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:403:in `_run__4336371336004161285__process_action__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.3) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.3) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.3) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/error_collector.rb:55:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/agent_hooks.rb:32:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/browser_monitoring.rb:27:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/developer_mode.rb:45:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.3) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__4486002864838662493__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.2) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.2) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.2) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.2) lib/thin/connection.rb:53:in `process'
+  thin (1.6.2) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.2) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.2) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.3) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.3) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.3) lib/rails/commands.rb:71:in `tap'
+  railties (4.0.3) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/all.xml" for 127.0.0.1 at 2014-03-22 15:04:22 +0000
+Processing by IndexController#index as XML
+  Rendered index/index.xml.erb (2.1ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/all.xml" for 127.0.0.1 at 2014-03-22 15:04:26 +0000
+Processing by IndexController#index as XML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY id DESC LIMIT 5 OFFSET 0[0m
+  Rendered index/index.xml.erb (12.7ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/all.xml" for 127.0.0.1 at 2014-03-22 15:04:29 +0000
+Processing by IndexController#index as XML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY id DESC LIMIT 5 OFFSET 0
+  Rendered index/index.xml.erb (2.0ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/all.xml" for 127.0.0.1 at 2014-03-22 15:04:50 +0000
+Processing by IndexController#index as XML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY id DESC LIMIT 5 OFFSET 0[0m
+  Rendered index/index.xml.erb (1.9ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/all.xml" for 127.0.0.1 at 2014-03-22 15:05:44 +0000
+Processing by IndexController#index as XML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY id DESC LIMIT 5 OFFSET 0
+  Rendered index/index.xml.erb (4.2ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feed/category/test-category-1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+Processing by CategoryController#index as HTML
+  Parameters: {"slug"=>"test-category-1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-1') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered category/_post.html.erb (18.3ms)
+  Rendered category/index.html.erb within layouts/application (27.0ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 8]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 10]]
+Completed 200 OK in 99ms (Views: 43.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 15:07:13 +0000
+
+
+Started GET "/feed/category/test-category-1.xml" for 127.0.0.1 at 2014-03-22 15:07:15 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-1"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" WHERE (category_slug='test-category-1') ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 2]]
+  Rendered category/index.xml.erb (1.3ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed/category/test-category-1.xml" for 127.0.0.1 at 2014-03-22 15:08:23 +0000
+
+SyntaxError (/Users/affix/Desktop/blog/config/routes.rb:16: syntax error, unexpected tASSOC, expecting keyword_end
+    :constraints => {:format => /(xml)/}
+                   ^):
+  activesupport (4.0.3) lib/active_support/dependencies.rb:223:in `load'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:223:in `block in load'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:214:in `load_dependency'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:223:in `load'
+  railties (4.0.3) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (4.0.3) lib/rails/application/routes_reloader.rb:40:in `each'
+  railties (4.0.3) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (4.0.3) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (4.0.3) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (4.0.3) lib/active_support/file_update_checker.rb:75:in `call'
+  activesupport (4.0.3) lib/active_support/file_update_checker.rb:75:in `execute'
+  railties (4.0.3) lib/rails/application/routes_reloader.rb:7:in `execute'
+  railties (4.0.3) lib/rails/application/finisher.rb:81:in `block (2 levels) in <module:Finisher>'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:407:in `_run__2982307384054237716__prepare__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:74:in `prepare!'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:62:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.2) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.2) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.2) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.2) lib/thin/connection.rb:53:in `process'
+  thin (1.6.2) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.2) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.2) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.3) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.3) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.3) lib/rails/commands.rb:71:in `tap'
+  railties (4.0.3) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.3ms)
+
+
+Started GET "/feed/category/test-category-1.xml" for 127.0.0.1 at 2014-03-22 15:08:34 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-1"}
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories" WHERE (category_slug='test-category-1') ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 2]]
+  Rendered category/index.xml.erb (11.5ms)
+Completed 200 OK in 32ms (Views: 14.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/feed/category/test-category-1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+Processing by CategoryController#index as HTML
+  Parameters: {"slug"=>"test-category-1"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" WHERE (category_slug='test-category-1') ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 3]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered category/_post.html.erb (46.2ms)
+  Rendered category/index.html.erb within layouts/application (48.0ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+Completed 200 OK in 69ms (Views: 65.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 15:08:37 +0000
+
+
+Started GET "/feed/category/test-category-1.json" for 127.0.0.1 at 2014-03-22 15:08:40 +0000
+Processing by CategoryController#index as JSON
+  Parameters: {"slug"=>"test-category-1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-1') ORDER BY "categories"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 4ms
+
+ActionView::MissingTemplate (Missing template category/index, application/index with {:locale=>[:en], :formats=>[:json], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/affix/Desktop/blog/app/views"
+  * "/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/kaminari-0.15.1/app/views"
+  * "/Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/twitter-bootstrap-rails-2.2.8/app/views"
+):
+  actionpack (4.0.3) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.3) lib/action_view/lookup_context.rb:122:in `find'
+  actionpack (4.0.3) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.3) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.3) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (4.0.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.3) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.3) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:403:in `_run__2989452140595232777__process_action__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.3) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.3) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.3) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/error_collector.rb:55:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/agent_hooks.rb:32:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/browser_monitoring.rb:27:in `call'
+  newrelic_rpm (3.7.3.204) lib/new_relic/rack/developer_mode.rb:45:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.3) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__4486002864838662493__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.2) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.2) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.2) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.2) lib/thin/connection.rb:53:in `process'
+  thin (1.6.2) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.2) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.2) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.3) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.3) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.3) lib/rails/commands.rb:71:in `tap'
+  railties (4.0.3) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered /Users/affix/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/feed/category/test-category-1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+Processing by CategoryController#index as HTML
+  Parameters: {"slug"=>"test-category-1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" WHERE (category_slug='test-category-1') ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?  [["post_id", 3]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered category/_post.html.erb (18.8ms)
+  Rendered category/index.html.erb within layouts/application (27.1ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+Completed 200 OK in 89ms (Views: 44.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 15:09:08 +0000
+
+
+Started GET "/feed/category/test-category-1.xml" for 127.0.0.1 at 2014-03-22 15:09:11 +0000
+Processing by CategoryController#index as XML
+  Parameters: {"slug"=>"test-category-1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE (category_slug='test-category-1') ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  Rendered category/index.xml.erb (1.4ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.3ms)

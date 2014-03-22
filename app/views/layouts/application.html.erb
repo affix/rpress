@@ -34,6 +34,7 @@
 	            <p>Keiran <em>Smith</em> is a Software Developer from Scotland.</p>
 	          </div>
 	          <div class="sidebar-module">
+	          	<a href="<%= root_url(:only_path => false) %>feed.xml"><i class="fa fa-rss"></i> RSS Feed</a><br />
 	            <h4>Categories</h4>
 	            <ol class="list-unstyled">
 	             	<% 	if Category.all != nil

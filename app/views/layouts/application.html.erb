@@ -36,7 +36,7 @@
 	          <div class="sidebar-module">
 	            <h4>Categories</h4>
 	            <ol class="list-unstyled">
-	             	<% 	if Category.all != nil %>
+	             	<% 	if Category.all != nil
 		             		Category.all.each do |c| %>
 		             		<li><a href="#"><%= c.category_title %> (<%= c.posts.count%>)</a></li>
 	             	<% 

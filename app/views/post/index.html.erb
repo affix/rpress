@@ -1,2 +1,21 @@
-index.html.erb
-Posts
+<% if @post != nil %>
+	<div class="blog-post">
+		<h4 class="blog-post-title"><%= @post.post_title %></h4>
+		<%= BlueCloth.new(@post.post_body.gsub("<MORE>", "")).to_html.html_safe %><br />
+		<hr>
+		<small>
+			<% @post.tags.each do |t| %>
+				<%= t.tag_name %> 
+			<% end %>
+			<div class="pull-right blog-post-meta">
+				<%= @post.created_at %> <a href="/about/<%= @post.author.username %>"><%= @post.author.first_name %> <%= @post.author.last_name %></a>
+			</div>
+		</small>
+		<br />
+	</div>
+<% else %>
+	<div class="alert alert-danger">
+	<strong>Error!</strong><br />
+	There are currently no posts available.
+	</div>
+<% end %>

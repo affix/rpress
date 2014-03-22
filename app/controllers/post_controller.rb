@@ -1,5 +1,5 @@
 class PostController < ApplicationController
 	def index
-		@slug = params[:slug]
+		@post = Post.where("post_slug='#{params[:slug]}'").first
 	end
 end

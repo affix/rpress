@@ -11,6 +11,11 @@ Blog::Application.routes.draw do
     erb :slug
   end
 
+ get '/post/:slug' => 'post#index' do
+    @slug = params[:slug]
+    erb :slug
+  end
+
   get "/about/" => "index#index"
 
   # Example of regular route:

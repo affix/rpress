@@ -45,6 +45,7 @@ gem "twitter-bootstrap-rails"
 gem "thin"
 
 gem "kaminari"
+gem 'bluecloth' 
 
 # Use unicorn as the app server
 # gem 'unicorn' 

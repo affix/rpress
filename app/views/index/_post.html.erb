@@ -1,6 +1,7 @@
 <div class="blog-post">
-	<h4 class="blog-post-title"><%= p.post_title %></h4>
+	<h4 class="blog-post-title"><a href="/post/<%= p.post_slug %>"><%= p.post_title %></a></h4>
 	<%= p.post_body.slice(0..(p.post_body.index('<MORE>'))).tr("<", "") %><br />
+	<br /><a href='/post/<%= p.post_slug %>'>Continue Reading...</a><br />
 	<hr>
 	<small>
 		<% p.tags.each do |t| %>

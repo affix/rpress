@@ -2,10 +2,10 @@
 	<h4 class="blog-post-title"><a href="/post/<%= p.post_slug %>"><%= p.post_title %></a></h4>
 	<% begin %>
 		<%= BlueCloth.new(p.post_body.slice(0..(p.post_body.index('<MORE>'))).tr("<", "")).to_html.html_safe %><br />
+		<br /><a href='/post/<%= p.post_slug %>'>Continue Reading...</a><br />
 	<% rescue %>
 		<%= BlueCloth.new(p.post_body).to_html.html_safe %><br />
 	<% end %>
-	<br /><a href='/post/<%= p.post_slug %>'>Continue Reading...</a><br />
 	<hr>
 	<small>
 		<% p.tags.each do |t| %>

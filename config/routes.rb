@@ -23,6 +23,7 @@ Blog::Application.routes.draw do
   end
 
   get "/about/" => "index#index"
+  get "/about/:username" => "index#index"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

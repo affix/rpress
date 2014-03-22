@@ -5,7 +5,7 @@
 	  <% @posts.each do |p| %>
 	  <item>
 	  <title><%= p.post_title %></title>
-	  <link>http://me-affix.hostr.pw/post/<%= p.post_slug %></link>
+	  <link><%= root_url(:only_path => false) %>post/<%= p.post_slug %></link>
 		  <% begin %>
 		  	<description><%= p.post_body.slice(0..(p.post_body.index('<MORE>'))).tr("<", "") %> </description>
 		  <% rescue %>

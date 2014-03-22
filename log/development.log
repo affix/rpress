@@ -11863,3 +11863,118 @@ Processing by IndexController#index as HTML
   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 9]]
   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 10]]
 Completed 200 OK in 52ms (Views: 49.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+Processing by IndexController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.6ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.2ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.1ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.2ms)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? ORDER BY "authors"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered index/_post.html.erb (2.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered index/index.html.erb within layouts/application (23.1ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."category_id" = ?  [["category_id", 10]]
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 01:42:24 +0000

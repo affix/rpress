@@ -11,6 +11,8 @@ Blog::Application.routes.draw do
     erb :slug
   end
 
+  get "/about/" => "index#index"
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

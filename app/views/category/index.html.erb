@@ -1,0 +1,5 @@
+<h3><%= @title %></h3>
+
+<% @posts.each do |p| %>
+	<%= render 'post', {p: p} %>
+<% end %>

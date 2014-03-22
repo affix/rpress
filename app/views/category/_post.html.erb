@@ -1,0 +1,14 @@
+<div class="blog-post">
+	<h4 class="blog-post-title"><%= p.post_title %></h4>
+	<%= p.post_body %><br />
+	<hr>
+	<small>
+		<% p.tags.each do |t| %>
+			<%= t.tag_name %> 
+		<% end %>
+		<div class="pull-right blog-post-meta">
+			<%= p.created_at %> <a href="/about/<%= p.author.username %>"><%= p.author.first_name %> <%= p.author.last_name %></a>
+		</div>
+	</small>
+	<br />
+</div>

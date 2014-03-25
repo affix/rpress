@@ -54,7 +54,6 @@ group :development do
 	gem 'rspec'
 	gem 'rspec-rails'
 	gem 'guard-rspec'
-	gem 'redgreen'
 end
 
 # Use unicorn as the app server

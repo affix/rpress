@@ -47,6 +47,13 @@ gem "thin"
 gem "kaminari"
 gem 'bluecloth' 
 
+group :development do
+	gem 'better_errors'
+	gem 'guard'
+	gem 'rspec'
+	gem 'guard-rspec'
+end
+
 # Use unicorn as the app server
 # gem 'unicorn' 
 

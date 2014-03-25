@@ -1,3 +1,4 @@
-The OpenShift `ruby` cartridge documentation can be found at:
+rBlog
+-----
 
-https://github.com/openshift/origin-server/tree/master/cartridges/openshift-origin-cartridge-ruby/README.md
+A Rails Blogging application by Keiran Smith

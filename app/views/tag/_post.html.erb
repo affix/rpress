@@ -8,6 +8,7 @@
 	<% end %>
 	<hr>
 	<small>
+		<span class="fa fa-tags"></span> 
 		<% p.tags.each do |t| %>
 			<a class="badge" href="/tag/<%= t.tag_slug %>"><%= t.tag_name %></a>
 		<% end %>

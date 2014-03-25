@@ -1,0 +1,12 @@
+<h3>Posts tagged as <%= @tag.tag_name %></h3>
+<hr />
+<% if @posts != nil %>
+	<% @posts.each do |p| %>
+		<%= render 'post', {p: p} %>
+	<% end %>
+<% else %>
+	<div class="alert alert-danger">
+	<strong>Error!</strong><br />
+	There are currently no posts available.
+	</div>
+<% end %>

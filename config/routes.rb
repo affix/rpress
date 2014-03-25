@@ -11,13 +11,23 @@ Blog::Application.routes.draw do
     erb :slug
   end
 
+  get '/feed/tag/:slug.:format' => 'tag#index' do
+    @slug = params[:slug]
+    erb :slug
+  end
+
  #resources :categories
- get '/category/:slug(.:format)' => 'category#index' do
+ get '/category/:slug' => 'category#index' do
     @slug = params[:slug]
     erb :slug
   end
 
  get '/post/:slug' => 'post#index' do
+    @slug = params[:slug]
+    erb :slug
+  end
+
+ get '/tag/:slug' => 'tag#index' do
     @slug = params[:slug]
     erb :slug
   end

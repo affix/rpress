@@ -4,3 +4,9 @@
 require File.expand_path('../config/application', __FILE__)
 
 Blog::Application.load_tasks
+
+task :test do
+  if ENV['RAILS_ENV'] == 'test'
+    exec 'bundle exec rspec'
+  end
+end

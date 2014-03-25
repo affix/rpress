@@ -1,4 +1,4 @@
-<h3>Posts tagged as <%= @tag.tag_name %></h3>
+<h3>Posts tagged as <%= @tag.tag_name %> <a class="fa fa-rss" href="/feed/tag/<%= @tag.tag_slug %>.xml"></a></h3>
 <hr />
 <% if @posts != nil %>
 	<% @posts.each do |p| %>

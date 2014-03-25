@@ -1,4 +1,4 @@
-<h3><%= @title %></h3>
+<h3><%= @title %> <a class="fa fa-rss" href="/feed/category/<%= @category.category_slug %>.xml"></a></h3>
 <hr />
 <% @posts.each do |p| %>
 	<%= render 'post', {p: p} %>

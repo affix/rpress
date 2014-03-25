@@ -45,13 +45,16 @@ gem "twitter-bootstrap-rails"
 gem "thin"
 
 gem "kaminari"
-gem 'bluecloth' 
+gem 'bluecloth'
+gem 'validates_email_format_of'
 
 group :development do
 	gem 'better_errors'
 	gem 'guard'
 	gem 'rspec'
+	gem 'rspec-rails'
 	gem 'guard-rspec'
+	gem 'redgreen'
 end
 
 # Use unicorn as the app server

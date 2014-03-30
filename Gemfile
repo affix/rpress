@@ -48,6 +48,10 @@ gem "kaminari"
 gem 'bluecloth'
 gem 'validates_email_format_of'
 
+
+gem 'rake'
+gem "binding_of_caller"
+
 group :development do
 	gem 'better_errors'
 	gem 'guard'

@@ -37,6 +37,6 @@ Blog::Application.routes.draw do
 
   get "/login/" => "session#new"
 
-  resources :session
+  resources :sessions
 
 end

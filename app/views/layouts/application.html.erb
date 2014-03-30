@@ -14,6 +14,11 @@
           <a class="blog-nav-item active" href="/">Home</a>
           <a class="blog-nav-item" href="#">About</a>
           <a class="blog-nav-item" href="http://fedoraproject.org">The Fedora Project</a>
+          <div class="pull-right blog-nav-item">
+            <% if session[:user_id] %>
+              You are Logged in as <%= Author.find(session[:user_id]).first_name %>
+            <% end %>
+          </div>
         </nav>
       </div>
     </header>
@@ -40,7 +45,7 @@
 	             	<% 	if Category.all != nil
 		             		Category.all.each do |c| %>
 		             		<li><a href="/category/<%= c.category_slug %>"><%= c.category_title %> (<%= c.posts.count%>)</a></li>
-	             	<% 
+	             	<%
 	             			end
 	             		end
 	             	%>
@@ -52,7 +57,7 @@
 	            	<li><a href="https://github.com/Affix/"><span class="fa fa-github-alt"> GitHub</span></a></li>
 	            	<li><a href="https://twitter.com/cli"><span class="fa fa-twitter"> Twitter</span></a></li>
 	            	<li><a href="http://uk.linkedin.com/in/affix/"><span class="fa fa-linkedin"> LinkedIn</span></a></li>
-	            	
+
 	            </ol>
 	          </div>
 	        </div><!-- /.blog-sidebar -->

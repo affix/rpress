@@ -35,7 +35,7 @@ Blog::Application.routes.draw do
   get "/about/" => "index#index"
   get "/about/:username" => "index#index"
 
-  get "/login/" => "session#new"
+  get "/login/" => "sessions#new"
 
   resources :sessions
 

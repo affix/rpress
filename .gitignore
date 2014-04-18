@@ -1,6 +1,6 @@
 *.rbc
 capybara-*.html
-/config/newrelic.yml
+#/config/newrelic.yml
 *.swp
 .rspec
 /log/*.log

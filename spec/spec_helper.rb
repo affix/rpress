@@ -40,3 +40,5 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 end
+
+Blog::Application.config.secret_key_base = '12345678901234567890qwertyuiopasdfghjklzxcvbnm'

@@ -34,8 +34,6 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'newrelic_rpm'
-
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
 
@@ -50,14 +48,12 @@ gem 'validates_email_format_of'
 
 
 gem 'rake'
-gem "binding_of_caller"
+
 
 group :development do
 	gem 'better_errors'
 	gem 'guard'
-	gem 'rspec'
-	gem 'rspec-rails'
-	gem 'guard-rspec'
+	gem 'binding_of_caller'
 end
 
 # Use unicorn as the app server

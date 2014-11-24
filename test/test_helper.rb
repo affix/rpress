@@ -9,6 +9,9 @@ require 'capybara/poltergeist'
 require "capybara/rails"
 require "minitest/rails/capybara"
 
+# Set Config Secret Key for CI Builds
+Blog::Application.config.secret_key_base = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890G'
+
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
@@ -45,8 +48,5 @@ Nulla lacinia sollicitudin nunc, sed viverra eros venenatis nec. Vivamus condime
 
 Ut ac suscipit diam. Vestibulum id sem ullamcorper mauris molestie egestas at sed turpis. Nam dapibus viverra magna, a accumsan urna pulvinar eget. Nullam lobortis ligula laoreet, aliquam tortor sit amet, fermentum tellus. Nunc sapien libero, porttitor nec est non, tempus elementum quam. Etiam eget risus volutpat, lacinia purus vitae, venenatis risus. Sed sodales ultrices sapien ac molestie. Fusce vestibulum pulvinar orci elementum congue. Donec ac orci porttitor, pretium tortor at, tristique mauris. In hac habitasse platea dictumst. Vestibulum eget metus ut nulla mattis consequat. Suspendisse at nunc nisi. Quisque tempor ullamcorper dui vel aliquam.", :category_id => x, :author_id => 1)
     end
-
-    # Set Config Secret Key for CI Builds
-    Blog::Application.config.secret_key_base = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890G'
   end
 end

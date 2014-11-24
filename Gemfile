@@ -50,10 +50,19 @@ gem 'validates_email_format_of'
 gem 'rake'
 
 
-group :development do
+group :development, :test do
 	gem 'better_errors'
 	gem 'guard'
 	gem 'binding_of_caller'
+	gem 'minitest'
+	gem 'minitest-rails'
+	gem 'capybara'
+	gem 'minitest-capybara'
+	gem 'minitest-rails-capybara'
+	gem 'pry'
+	gem 'capybara_minitest_spec'
+	gem 'rspec-expectations'
+	gem 'poltergeist'
 end
 
 # Use unicorn as the app server
